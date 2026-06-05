@@ -146,68 +146,28 @@ img { display: block; max-width: 100%; }
 /* Hero visual */
 .hero__visual {
   position: relative;
-  height: 380px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero__shapes {
+.hero__vector {
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.shape {
-  position: absolute;
-  border-radius: 24px;
-}
-
-.shape--orange {
-  width: 240px;
-  height: 240px;
-  background: #F5A623;
-  bottom: 10px;
-  left: 20px;
-  transform: rotate(-15deg);
-  z-index: 0;
-}
-
-.shape--blue {
-  width: 220px;
-  height: 220px;
-  background: #4DC9F6;
-  top: 10px;
-  right: 10px;
-  transform: rotate(10deg);
-  z-index: 0;
-}
-
-.shape--red {
-  width: 160px;
-  height: 160px;
-  background: #E85D75;
-  top: 40px;
-  left: 80px;
-  transform: rotate(5deg);
-  z-index: 1;
-}
-
-.hero__img-wrap {
-  position: relative;
-  z-index: 2;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  max-width: 560px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
 }
 
 .hero__people {
-  width: 100%;
+  position: relative;
+  z-index: 1;
+  width: 72%;
   max-width: 360px;
   height: auto;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+  object-fit: contain;
 }
 
 /* ══════════════════════════════════════════
@@ -271,139 +231,17 @@ img { display: block; max-width: 100%; }
 }
 
 /* ══════════════════════════════════════════
-   TABLET MOCKUP
+   TREE TESTING IMAGE
 ══════════════════════════════════════════ */
-.tablet-mockup {
-  background: #1a1a2e;
-  border-radius: 18px;
-  padding: 12px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-  max-width: 460px;
+.tree-testing-img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
   margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
 }
-
-.tablet-mockup__screen {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  font-size: 0.7rem;
-}
-
-.mock-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 12px;
-  background: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
-}
-
-.mock-tag {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: #333;
-}
-
-.mock-toggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.mock-dot {
-  width: 24px;
-  height: 12px;
-  border-radius: 6px;
-  background: #4A90D9;
-  position: relative;
-}
-.mock-dot::after {
-  content: '';
-  position: absolute;
-  right: 1px;
-  top: 1px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: white;
-}
-
-.mock-label { font-size: 0.65rem; color: #4A90D9; font-weight: 600; }
-
-.mock-body {
-  display: flex;
-  min-height: 200px;
-}
-
-.mock-panel { padding: 10px 12px; }
-
-.mock-panel--left {
-  flex: 1.2;
-  border-right: 1px solid #e9ecef;
-}
-
-.mock-panel--right {
-  flex: 1;
-  background: #fafbff;
-}
-
-.mock-field { margin-bottom: 10px; }
-
-.mock-label-sm {
-  font-size: 0.6rem;
-  font-weight: 700;
-  color: #888;
-  text-transform: uppercase;
-  margin-bottom: 3px;
-}
-
-.mock-input-bar {
-  height: 4px;
-  background: #4A90D9;
-  border-radius: 2px;
-  width: 85%;
-  margin-bottom: 3px;
-}
-.mock-input-bar--sm { width: 70%; background: #ddd; height: 3px; }
-
-.mock-tree { margin-top: 4px; }
-
-.mock-tree-item {
-  font-size: 0.6rem;
-  color: #444;
-  padding: 2px 0;
-  cursor: pointer;
-}
-.mock-tree-item--l1 { font-weight: 700; }
-.mock-tree-item--l2 { padding-left: 10px; }
-.mock-tree-item--l3 { padding-left: 20px; color: #666; }
-.mock-tree-item.active { color: #4A90D9; font-weight: 600; }
-
-.mock-task-title {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #1a1a2e;
-  margin-bottom: 4px;
-}
-
-.mock-task-desc {
-  font-size: 0.62rem;
-  color: #777;
-  margin-bottom: 12px;
-}
-
-.mock-breadcrumb {
-  font-size: 0.6rem;
-  color: #555;
-  background: #f0f4ff;
-  padding: 4px 8px;
-  border-radius: 4px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.mock-arrow { color: #aaa; }
 
 /* ══════════════════════════════════════════
    PRÓXIMAS HERRAMIENTAS
@@ -461,17 +299,24 @@ img { display: block; max-width: 100%; }
 }
 
 /* Card sorting visual */
+.tool-card__img {
+  width: 130px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
 .card-stack {
   position: relative;
-  width: 100px;
-  height: 90px;
+  width: 110px;
+  height: 95px;
   flex-shrink: 0;
 }
 
 .card-stack__item {
   position: absolute;
-  width: 88px;
-  height: 70px;
+  width: 92px;
+  height: 72px;
   border-radius: 8px;
   background: #fff;
   border: 1px solid #e0e0e0;
@@ -496,20 +341,18 @@ img { display: block; max-width: 100%; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
+  overflow: hidden;
+  padding: 6px;
 }
 
-.card-stack__logo {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.52rem;
-  font-weight: 800;
-  color: #1a1a2e;
+.card-stack__logo-img {
+  width: 60px;
+  height: auto;
 }
 
 .card-stack__label {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 600;
   color: #555;
 }
@@ -583,9 +426,9 @@ img { display: block; max-width: 100%; }
   justify-content: center;
 }
 
-.pricing__badge svg {
-  width: 240px;
-  height: 240px;
+.pricing__badge-img {
+  width: 260px;
+  height: auto;
   filter: drop-shadow(0 8px 24px rgba(124,179,66,0.35));
   animation: badgePulse 3s ease-in-out infinite;
 }
@@ -638,19 +481,20 @@ img { display: block; max-width: 100%; }
 }
 
 .social-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  transition: opacity 0.2s, transform 0.15s;
 }
 .social-icon:hover {
-  background: rgba(255,255,255,0.15);
-  border-color: #fff;
+  opacity: 0.75;
   transform: translateY(-2px);
+}
+
+.social-icon__img {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 
 .footer__divider {
@@ -666,10 +510,15 @@ img { display: block; max-width: 100%; }
 }
 
 .footer__brand {
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: 0.04em;
   margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__brand-img {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
 }
 
 .footer__copy {
